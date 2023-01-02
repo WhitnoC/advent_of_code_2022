@@ -17,9 +17,6 @@ with open("input") as f:
 elf_group_max = len(input) // 3
 elf_groups = list(zip(*(iter(input),) * 3))
 
-
-badges = []
-scores = []
 total_score = 0
 for group in elf_groups:
     group_formatted = []
@@ -34,7 +31,6 @@ for group in elf_groups:
     if common in uppercase_items:
         score_for_item = uppercase_score[uppercase_items.index(common)]
 
-    scores.append(score_for_item)
     total_score = total_score + score_for_item
 
 print(total_score)
